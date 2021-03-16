@@ -1,47 +1,24 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class balanceleft : MonoBehaviour {
-    public Animator Animaleft;
+public class ManagerPersons : MonoBehaviour
+{
     [SerializeField] GameObject personRationalOnScene, personEmotionalOnScene; //variável para manter a sprite que será mostrada em cena 
     [SerializeField] Transform pointPersonRationalSpawn, pointPersonEmotionalSpawn; //variável para spawnar as personagens fora de cena
     [SerializeField] Transform pointPersonRationalOnScene, pointPersonEmotionalOnScene; //variável para mover os personagens para ficar em cena
     [SerializeField] Transform pointPersonRationalDying, pointPersonEmotionalDying; //variavel para mover os personagens para sair da cena
     [SerializeField] Text txtDescriptionRational, txtDescriptionEmotional;
     public string rationalDescriptionOnScene, emotionalDescriptionOnScene;
-    private string[] rationalDescription;
-    private string[] emotionalDescription;
-    private Sprite[] persons; // vetor para guardar as sprites que serão sorteadas
-    private int score = 0;
+    public string[] rationalDescription;
+    public string[] emotionalDescription;
+    public Sprite[] persons; // vetor para guardar as sprites que serão sorteadas
+    public int score = 0;
     [SerializeField] float speed = 50.0f;
     public int rounds = 3;
-    private bool chosedbutton = false;
+    
 
-    public void Button1() {
-        //Animaleft.Play("left");
-        Animaleft.SetBool("Move", true);
-        Invoke("Button2", 2.0f);
-        chosedbutton = true;
-        AddScore();
-    }
-
-    public void Button2() {
-        Animaleft.SetBool("Move", false);
-    }
-
-    public void Button3() {
-        //Animaleft.Play("left");
-        Animaleft.SetBool("MoveRight", true);
-        Invoke("Button4", 2.0f);
-        chosedbutton = true;
-        SubScore();
-    }
-
-    public void Button4() {
-        Animaleft.SetBool("MoveRight", false);
-    }
-
+    
     void Start()
     {
         rationalDescription = new string[4];
@@ -57,33 +34,23 @@ public class balanceleft : MonoBehaviour {
         emotionalDescription[3] = "Teve 4 filhos muito cedo, e dedicou sua vida a eles. Deu muito amor, mas precisava roubar para alimentá-los. Morreu antes de ver todos os filhos completarem a maioridade";
 
         persons = new Sprite[6];
-        persons[0] = Resources.Load<Sprite>("Personagens/PERSONAGEM1");
-        persons[1] = Resources.Load<Sprite>("Personagens/PERSONAGEM2");
-        persons[2] = Resources.Load<Sprite>("Personagens/PERSONAGEM3");
-        persons[3] = Resources.Load<Sprite>("Personagens/PERSONAGEM4");
-        persons[4] = Resources.Load<Sprite>("Personagens/PERSONAGEM5");
-        persons[5] = Resources.Load<Sprite>("Personagens/PERSONAGEM6");
+        persons[0] = Resources.Load<Sprite>("Persons/personagem1");
+        persons[1] = Resources.Load<Sprite>("Persons/personagem2");
+        persons[2] = Resources.Load<Sprite>("Persons/personagem3");
+        persons[3] = Resources.Load<Sprite>("Persons/personagem4");
+        persons[4] = Resources.Load<Sprite>("Persons/personagem5");
+        persons[5] = Resources.Load<Sprite>("Persons/personagem6");
         
+
         SpawnPersons();
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (personEmotionalOnScene.GetComponent<Transform>().position.x > pointPersonEmotionalOnScene.position.x)
-        {
-            MovePersonsToScene();
-        }
-
-        if (chosedbutton)
-        {
-            MovePersonsOutScene();
-            CheckScore();
-            Debug.Log(score);
-        }
-
-
+      
+        MovePersonsToScene(); 
     }
 
     public void SpawnPersons()
@@ -91,7 +58,7 @@ public class balanceleft : MonoBehaviour {
         //selecionar aleatoriamente os personagens e carregar na sprite
         int position = Random.Range(0, 5);
         personRationalOnScene.GetComponent<SpriteRenderer>().sprite = persons[position];
-
+        
         position = Random.Range(0, 5);
         personEmotionalOnScene.GetComponent<SpriteRenderer>().sprite = persons[position];
 
@@ -102,7 +69,7 @@ public class balanceleft : MonoBehaviour {
         emotionalDescriptionOnScene = emotionalDescription[position];
 
     }
-
+    
 
     public void MovePersonsToScene()
     {
@@ -118,7 +85,7 @@ public class balanceleft : MonoBehaviour {
         ShowDescription();
     }
 
-
+    
     public void MovePersonsOutScene()
     {
         //mover personagens para sair da cena e remover descrição dos personagens
@@ -138,7 +105,7 @@ public class balanceleft : MonoBehaviour {
 
     public void CheckScore()
     {
-        if (score > 0)
+        if(score> 0)
         {
             SceneManager.LoadScene("FinalEmocional");
         }

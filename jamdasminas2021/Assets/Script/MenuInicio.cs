@@ -24,7 +24,7 @@ public class MenuInicio : MonoBehaviour
 
     public void ChamaJogar()
     {
-        SceneManager.LoadScene("Jogar");
+        SceneManager.LoadScene("GamePlay");
     }
 
     public void ChamaCreditos()

@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: c781ffb44522826419ccefacb499f9bd
+  - enabled: 1
+    path: Assets/Scenes/FinalEmocional.unity
+    guid: 41700d318e87a4a4896f5457fd3552a8
+  - enabled: 1
+    path: Assets/Scenes/FinalRacional.unity
+    guid: 5afc155adc89a3c4b97252ec0dd635d3
+  - enabled: 1
+    path: Assets/Scenes/GamePlay.unity
+    guid: fe62710c5093da14f98c551a5e179378
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: 4e8d520e9eb531b4d85e1bd02d69a6a5
   m_configObjects: {}
