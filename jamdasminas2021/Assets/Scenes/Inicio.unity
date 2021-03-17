@@ -148,15 +148,15 @@ RectTransform:
   m_GameObject: {fileID: 91295238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.68, y: 0.35, z: 0.74}
   m_Children: []
   m_Father: {fileID: 1884261366}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.8, y: 159}
-  m_SizeDelta: {x: 685.71967, y: 484.07837}
+  m_AnchoredPosition: {x: -428.3, y: 349.2}
+  m_SizeDelta: {x: 753.2, y: 407.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &91295240
 MonoBehaviour:
@@ -231,7 +231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 470, y: -295}
+  m_AnchoredPosition: {x: 294.2, y: -398.47}
   m_SizeDelta: {x: 241.68665, y: 83.14982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230278962
@@ -361,7 +361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -486, y: -291}
+  m_AnchoredPosition: {x: -307.1, y: -398.47}
   m_SizeDelta: {x: 241.68689, y: 83.14982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &355113653
@@ -583,7 +583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -291}
+  m_AnchoredPosition: {x: 5, y: -398.47}
   m_SizeDelta: {x: 241.68695, y: 83.14982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741611687
@@ -746,7 +746,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sair
+  m_Text: SAIR
 --- !u!222 &804384578
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Cr\xE9ditos"
+  m_Text: "CR\xC9DITOS"
 --- !u!222 &1096465828
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jogar
+  m_Text: JOGAR
 --- !u!222 &1214256417
 CanvasRenderer:
   m_ObjectHideFlags: 0
