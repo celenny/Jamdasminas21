@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9137553180928421626}
   - component: {fileID: 9137553180928421620}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasBalance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,6 +116,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animaleft: {fileID: 0}
+  personRationalOnScene: {fileID: 0}
+  personEmotionalOnScene: {fileID: 0}
+  pointPersonRationalSpawn: {fileID: 0}
+  pointPersonEmotionalSpawn: {fileID: 0}
+  pointPersonRationalOnScene: {fileID: 0}
+  pointPersonEmotionalOnScene: {fileID: 0}
+  pointPersonRationalDying: {fileID: 0}
+  pointPersonEmotionalDying: {fileID: 0}
+  txtDescriptionRational: {fileID: 0}
+  txtDescriptionEmotional: {fileID: 0}
+  rationalDescriptionOnScene: 
+  emotionalDescriptionOnScene: 
+  speed: 50
+  rounds: 3
 --- !u!95 &9137553180928421626
 Animator:
   serializedVersion: 3
@@ -220,8 +234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -246.3, y: -232.56}
-  m_SizeDelta: {x: 136.1539, y: 119.79521}
+  m_AnchoredPosition: {x: -239, y: -227.28}
+  m_SizeDelta: {x: 179.29813, y: 176.30849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9137553181865319286
 CanvasRenderer:
