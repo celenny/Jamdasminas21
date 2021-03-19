@@ -384,9 +384,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 2
   m_Text: "Milena Ramos - Arte 2D e UI\nPriscilla Rego - Desenvolvedora Unity\nIsabelly
-    Rohana - Desenvolverora Unity\nCarol Fernandez - Roteirista e Arte 2D \nRia Paix\xE3o 
-    - UI, Game Design e Anima\xE7\xE3o\nCelenny Cristhyne - Desenvolverora Unity\nAna
-    Let\xEDcia Saraiva - Arte 2D, UI  e Desenvolvedora \n"
+    Rohana - Desenvolvedora Unity\nCarol Fernandez - Roteirista e Arte 2D \nRia Paix\xE3o 
+    - UI, Game Design e Anima\xE7\xE3o\nCelenny Cristhyne - Desenvolvedora Unity\nAna
+    Let\xEDcia Saraiva - Arte 2D, UI e Desenvolvedora \n"
 --- !u!222 &419438888
 CanvasRenderer:
   m_ObjectHideFlags: 0
