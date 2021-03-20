@@ -8,16 +8,14 @@ public class CarregarGameplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("CarregarCena");
-        Debug.Log("chamou");
+
     }
 
-    IEnumerator CarregarCena(){
-        Debug.Log("chamouaaaaa");
-        yield return new WaitForSeconds(16f);
+    public void CarregarCena(){
         SceneManager.LoadScene("GamePlay");
-
     }
+    
+  
     // Update is called once per frame
     void Update()
     {

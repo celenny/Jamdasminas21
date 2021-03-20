@@ -701,7 +701,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 297825915}
-        m_MethodName: ChamaJogar
+        m_MethodName: ChamaInicio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
