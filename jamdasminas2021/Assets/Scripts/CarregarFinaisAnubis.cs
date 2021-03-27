@@ -15,7 +15,6 @@ public class CarregarFinaisAnubis : MonoBehaviour
     void CheckScore()
     {
         score = GameManagerScore.Instance.GetPontos();
-        Debug.Log(GameManagerScore.Instance.GetPontos());
         if (score > 0)
         {
             StartCoroutine("ChamaEmocional");
@@ -32,10 +31,5 @@ public class CarregarFinaisAnubis : MonoBehaviour
     IEnumerator ChamaRacional(){
         yield return new WaitForSeconds(7f);
         SceneManager.LoadScene("FinalRacional");
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
