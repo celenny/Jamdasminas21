@@ -25,11 +25,11 @@ public class CarregarFinaisAnubis : MonoBehaviour
         }
     }
     IEnumerator ChamaEmocional(){
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(8f);
         SceneManager.LoadScene("FinalEmocional");
     }
     IEnumerator ChamaRacional(){
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(8f);
         SceneManager.LoadScene("FinalRacional");
     }
 }
