@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: jdm21-mesa2
   productName: Sala das duas verdades
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -267,7 +267,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1b522af6e3ed4b547bcad0299c2cfee2, type: 3}
+      m_Icon: {fileID: 2800000, guid: 2cb3f222c12a0554c9a3f3031edb9b26, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

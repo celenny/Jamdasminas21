@@ -167,7 +167,7 @@ public class balanceleft : MonoBehaviour {
     {
 
         atRound++;
-        if (atRound <= 3) {
+        if (atRound < 3) {
             score++;
             SpawnPersons();
         }
@@ -178,7 +178,7 @@ public class balanceleft : MonoBehaviour {
     {
 
         atRound++;
-        if (atRound <= 3) {
+        if (atRound < 3) {
             score--;
             SpawnPersons();
         }
