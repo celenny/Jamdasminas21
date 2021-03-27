@@ -17,11 +17,11 @@ public class CarregarFinaisAnubis : MonoBehaviour
         score = GameManagerScore.Instance.GetPontos();
         if (score > 0)
         {
-            StartCoroutine("ChamaEmocional");
+            StartCoroutine("ChamaRacional");
         }
         else
         {
-            StartCoroutine("ChamaRacional");
+            StartCoroutine("ChamaEmocional");
         }
     }
     IEnumerator ChamaEmocional(){
