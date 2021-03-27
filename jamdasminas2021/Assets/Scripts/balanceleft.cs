@@ -15,7 +15,7 @@ public class balanceleft : MonoBehaviour {
     public string rationalDescriptionOnScene, emotionalDescriptionOnScene;
     private List<string> rationalDescription = new List<string>();
     private List<string> emotionalDescription = new List<string>();
-    private Sprite[] persons; // vetor para guardar as sprites que serão sorteadas
+    private List<Sprite> persons = new List<Sprite>(); // vetor para guardar as sprites que serão sorteadas
     private int score = 0;
     [SerializeField] float speed = 50.0f;
     public int rounds = 3;
@@ -64,13 +64,12 @@ public class balanceleft : MonoBehaviour {
         emotionalDescription.Add("Essa pessoa era artesã. Ele fazia seus trabalhos para a alta hierarquia e pequenos mercadores que os vendia no mercado. Tratava bem as pessoas que estavam ao seu redor, embora sentisse repulsa do faraó. Negou-se a se curvar diante do Faraó. Foi morto como traidor.");
         emotionalDescription.Add("Teve 4 filhos muito cedo, e dedicou sua vida a eles. Deu muito amor, mas precisava roubar para alimentá-los. Morreu antes de ver todos os filhos completarem a maioridade");
 
-        persons = new Sprite[6];
-        persons[0] = Resources.Load<Sprite>("Personagens/PERSONAGEM1");
-        persons[1] = Resources.Load<Sprite>("Personagens/PERSONAGEM2");
-        persons[2] = Resources.Load<Sprite>("Personagens/PERSONAGEM3");
-        persons[3] = Resources.Load<Sprite>("Personagens/PERSONAGEM4");
-        persons[4] = Resources.Load<Sprite>("Personagens/PERSONAGEM5");
-        persons[5] = Resources.Load<Sprite>("Personagens/PERSONAGEM6");
+        persons.Add(Resources.Load<Sprite>("Personagens/PERSONAGEM1"));
+        persons.Add(Resources.Load<Sprite>("Personagens/PERSONAGEM2"));
+        persons.Add(Resources.Load<Sprite>("Personagens/PERSONAGEM3"));
+        persons.Add(Resources.Load<Sprite>("Personagens/PERSONAGEM4"));
+        persons.Add(Resources.Load<Sprite>("Personagens/PERSONAGEM5"));
+        persons.Add(Resources.Load<Sprite>("Personagens/PERSONAGEM6"));
         atRound = 0;
         SpawnPersons();
 
@@ -98,11 +97,13 @@ public class balanceleft : MonoBehaviour {
         personEmotionalOnScene.GetComponent<Transform>().position = pointPersonEmotionalSpawn.position;
 
         //selecionar aleatoriamente os personagens e carregar na sprite
-        int position = Random.Range(0, 5);
+        int position = Random.Range(0, persons.Count);
         personRationalOnScene.GetComponent<SpriteRenderer>().sprite = persons[position];
+        persons.RemoveAt(position);
 
-        position = Random.Range(0, 5);
+        position = Random.Range(0, persons.Count);
         personEmotionalOnScene.GetComponent<SpriteRenderer>().sprite = persons[position];
+        persons.RemoveAt(position);
 
         position = Random.Range(0, rationalDescription.Count);
         rationalDescriptionOnScene = rationalDescription[position].ToString();
