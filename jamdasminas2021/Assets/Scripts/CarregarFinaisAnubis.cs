@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,11 +25,11 @@ public class CarregarFinaisAnubis : MonoBehaviour
         }
     }
     IEnumerator ChamaEmocional(){
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(9f);
         SceneManager.LoadScene("FinalEmocional");
     }
     IEnumerator ChamaRacional(){
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(9f);
         SceneManager.LoadScene("FinalRacional");
     }
 }
