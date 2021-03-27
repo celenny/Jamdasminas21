@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class balanceleft : MonoBehaviour {
     public Animator Animaleft;
@@ -8,6 +9,7 @@ public class balanceleft : MonoBehaviour {
     [SerializeField] Transform pointPersonRationalSpawn, pointPersonEmotionalSpawn; //variável para spawnar as personagens fora de cena
     [SerializeField] Transform pointPersonRationalOnScene, pointPersonEmotionalOnScene; //variável para mover os personagens para ficar em cena
     [SerializeField] Transform pointPersonRationalDying, pointPersonEmotionalDying; //variavel para mover os personagens para sair da cena
+    [SerializeField] Transform outScene,beforeScene;
     [SerializeField] Text txtDescriptionRational, txtDescriptionEmotional;
     public string rationalDescriptionOnScene, emotionalDescriptionOnScene;
     private string[] rationalDescription;
@@ -16,8 +18,10 @@ public class balanceleft : MonoBehaviour {
     private int score = 0;
     [SerializeField] float speed = 50.0f;
     public int rounds = 3;
-    private bool chosedbutton = false;
-
+    public int atRound;
+    private bool chosedbutton;
+    private bool somouTurno = false;
+ 
     public void Button1() {
         //Animaleft.Play("left");
         Animaleft.SetBool("Move", true);
@@ -63,31 +67,42 @@ public class balanceleft : MonoBehaviour {
         persons[3] = Resources.Load<Sprite>("Personagens/PERSONAGEM4");
         persons[4] = Resources.Load<Sprite>("Personagens/PERSONAGEM5");
         persons[5] = Resources.Load<Sprite>("Personagens/PERSONAGEM6");
-        
+        atRound = 0;
         SpawnPersons();
-        
+
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (personEmotionalOnScene.GetComponent<Transform>().position.x > pointPersonEmotionalOnScene.position.x)
+            {
+                MovePersonsToScene();
+            }
+   
+        //if (personRationalOnScene.GetComponent<Transform>().position.x > pointPersonRationalDying.position.x)
+        //        MovePersonsOutScene();
+ 
+
+        if (personEmotionalOnScene.GetComponent<Transform>().position.x < outScene.position.x)
         {
-            MovePersonsToScene();
+            chosedbutton = false;
         }
 
-        if (chosedbutton)
+        if (atRound == rounds)
         {
-            MovePersonsOutScene();
+            GameManagerScore.Instance.SetPontos(score);
+
             CheckScore();
-            Debug.Log(score);
         }
-
-
+        
     }
 
     public void SpawnPersons()
     {
+        personRationalOnScene.GetComponent<Transform>().position = pointPersonRationalSpawn.position;
+        personEmotionalOnScene.GetComponent<Transform>().position = pointPersonEmotionalSpawn.position;
+
         //selecionar aleatoriamente os personagens e carregar na sprite
         int position = Random.Range(0, 5);
         personRationalOnScene.GetComponent<SpriteRenderer>().sprite = persons[position];
@@ -116,6 +131,7 @@ public class balanceleft : MonoBehaviour {
         personEmotionalOnScene.GetComponent<Transform>().position = Vector2.Lerp(personEmotionalOnScene.GetComponent<Transform>().position, destinationEmotional, Time.deltaTime);
 
         ShowDescription();
+
     }
 
 
@@ -136,25 +152,35 @@ public class balanceleft : MonoBehaviour {
         txtDescriptionEmotional.text = emotionalDescriptionOnScene;
     }
 
-    public void CheckScore()
+    void CheckScore()
     {
-        if (score > 0)
-        {
-            SceneManager.LoadScene("FinalEmocional");
-        }
-        else
-        {
-            SceneManager.LoadScene("FinalRacional");
-        }
+        GameManagerScore.Instance.GetPontos();
+        StartCoroutine("ChamaFinal");
+    }
+    IEnumerator ChamaFinal()
+    {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("anunbisFinal");
     }
 
     public void AddScore()
     {
-        score++;
+
+        atRound++;
+        if (atRound <= 3) {
+            score++;
+            SpawnPersons();
+        }
+        
     }
 
     public void SubScore()
     {
-        score--;
+
+        atRound++;
+        if (atRound <= 3) {
+            score--;
+            SpawnPersons();
+        }
     }
 }

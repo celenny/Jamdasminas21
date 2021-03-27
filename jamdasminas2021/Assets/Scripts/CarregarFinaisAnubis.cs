@@ -5,17 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class CarregarFinaisAnubis : MonoBehaviour
 {
+    int score;
     // Start is called before the first frame update
     void Start()
     {
-        
+        CheckScore();
+    }
+
+    void CheckScore()
+    {
+        score = GameManagerScore.Instance.GetPontos();
+        Debug.Log(GameManagerScore.Instance.GetPontos());
+        if (score > 0)
+        {
+            StartCoroutine("ChamaEmocional");
+        }
+        else
+        {
+            StartCoroutine("ChamaRacional");
+        }
     }
     IEnumerator ChamaEmocional(){
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(7f);
         SceneManager.LoadScene("FinalEmocional");
     }
     IEnumerator ChamaRacional(){
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(7f);
         SceneManager.LoadScene("FinalRacional");
     }
     // Update is called once per frame
