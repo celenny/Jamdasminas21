@@ -8,7 +8,7 @@
 - Produção da mesa 2 na Jam das Minas 2021 - Uma mistura do Brasil com o Egito
 - Teste o nosso joguinho [aqui](https://anathropos.itch.io/a-sala-das-duas-verdades) não deixe de nos mandar suas impressões.
 
-## 🖤 Contribuidoras 🤍<br>
+## 🖤 Programadoras 🤍<br>
 <table>
   <tr>
     <td align="center">
