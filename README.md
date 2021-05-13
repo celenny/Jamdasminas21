@@ -5,7 +5,7 @@
 </p>
 
 ### A Sala das Duas Verdades é o lugar onde se realiza a pesagem do coração das pessoas mortas. Várias delas estão enfileiradas num corredor escuro, que leva à uma grande porta, para a qual você se dirige lentamente. Essas almas esperam para descobrir o destino que as aguarda, se irão para o Paraíso de Aaru ou se serão jogadas para Ammit, o Devorador de Almas. Será você quem decidirá se vai seguir o caminho da Mente e da Razão ou o caminho do Coração e da Emoção. Escolha apenas um deles. Duas pessoas julgadas, dois caminhos possíveis. Mas você tem apenas uma escolha.
-- Produção da mesa 2 na Jam das Minas 2021 - Uma mistura do Brasil com o Egito
+- Produção da mesa 2 durante a [Game Jam das Minas](http://www.jamdasminas.com.br) 2021 
 - Teste o nosso joguinho [aqui](https://anathropos.itch.io/a-sala-das-duas-verdades) e não deixe de nos mandar suas impressões.
 
 ## 🖤 Programadoras 🤍<br>
